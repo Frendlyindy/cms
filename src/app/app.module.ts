@@ -8,12 +8,13 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
 import { ContactItemComponent } from './contacts/contact-item/contact-item.component';
 import { DocumentsComponent } from './documents/documents.component';
-import { DosumentItemComponent } from './documents/dosument-item/dosument-item.component';
-import { DosumentDetailComponent } from './documents/dosument-detail/dosument-detail.component';
-import { DosumentListComponent } from './documents/dosument-list/dosument-list.component';
+import { DocumentItemComponent } from './documents/document-item/document-item.component';
+import { DocumentDetailComponent } from './documents/document-detail/document-detail.component';
+import { DocumentListComponent } from './documents/document-list/document-list.component';
 import { MessageItemComponent } from './messages/message-item/message-item.component';
 import { MessageEditComponent } from './messages/message-edit/message-edit.component';
 import { MessageListComponent } from './messages/message-list/message-list.component';
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -24,17 +25,16 @@ import { MessageListComponent } from './messages/message-list/message-list.compo
     ContactDetailComponent,
     ContactItemComponent,
     DocumentsComponent,
-    DosumentItemComponent,
-    DosumentDetailComponent,
-    DosumentListComponent,
+    DocumentItemComponent,
+    DocumentDetailComponent,
+    DocumentListComponent,
     MessageItemComponent,
     MessageEditComponent,
-    MessageListComponent
+    MessageListComponent,
+    DropdownDirective,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
