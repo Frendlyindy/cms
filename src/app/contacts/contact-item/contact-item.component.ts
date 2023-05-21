@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Contact } from '../contact.model';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact-item',
@@ -8,9 +9,10 @@ import { Contact } from '../contact.model';
 })
 export class ContactItemComponent {
   @Input() contact: Contact;
-  @Output() selectedContact = new EventEmitter();
+
+  constructor(private contactService: ContactService) {}
 
   onSelected() {
-    this.selectedContact.emit();
+    this.contactService.contactSelectedEvent.emit(this.contact);
   }
 }

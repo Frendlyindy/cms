@@ -1,16 +1,16 @@
 export class Document {
-  public id: Number;
+  public id: String;
   public name: String;
-  public description: String;
-  public url: String;
-  public children: Document;
+  public description?: String;
+  public url?: String;
+  public children?: Document[];
 
   constructor(
-    id: Number,
+    id: String,
     name: String,
     description: String,
     url: String,
-    children: Document
+    children: Document[]
   ) {
     this.id = id;
     this.name = name;
