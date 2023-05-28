@@ -2,13 +2,13 @@
   <div class="panel-heading">
     <div class="row pad-left-right">
       <span class="pull-left title">Documents</span>
-      <a class="btn btn-success pull-right">Add Document</a>
+      <a class="btn btn-success pull-right" (click)="onNewDocument()">Add Document</a>
     </div>
   </div>
   <div class="panel-body">
     <div class="center-panel">
-      <app-document-item *ngFor="let document of documents" [incomingDoc]="document"
-        (click)="onSelectedDocument(document)"></app-document-item>
+      <app-document-item *ngFor="let document of documents; let i = index" [incomingDoc]="document"
+        [index]="i"></app-document-item>
     </div>
   </div>
 

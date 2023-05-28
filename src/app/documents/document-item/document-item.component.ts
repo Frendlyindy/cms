@@ -8,4 +8,5 @@ import { Document } from '../documents.model';
 })
 export class DocumentItemComponent {
   @Input() incomingDoc: Document;
+  @Input() index: number;
 }

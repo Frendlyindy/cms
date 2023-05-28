@@ -16,12 +16,7 @@ export class DocumentsService {
     return this.documents;
   }
 
-  getDocument(id: string): Document {
-    for (const document of this.documents) {
-      if (document.id === id) {
-        return document;
-      }
-    }
-    return null;
+  getDocument(id: number): Document {
+    return this.documents[id];
   }
 }
