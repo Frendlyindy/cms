@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Document } from '../documents.model';
 import { DocumentsService } from '../documents.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-document-list',
@@ -10,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DocumentListComponent implements OnInit {
   @Output() documents: Document[];
-
+  subscription: Subscription;
   @Output() selectedDocumentEvent = new EventEmitter<Document>();
   constructor(
     private documentService: DocumentsService,
